@@ -1,0 +1,14 @@
+[Unit]
+Description=Express Bun API 
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+User=rauufaa
+WorkingDirectory=/home/rauufaa/kuliah/project-tugas-akhir/bun-framework
+ExecStart=/home/rauufaa/.bun/bin/bun /home/rauufaa/kuliah/project-tugas-akhir/bun-framework/src/index.js
+
+[Install]
+WantedBy=multi-user.target

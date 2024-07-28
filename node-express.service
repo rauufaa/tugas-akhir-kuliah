@@ -1,0 +1,14 @@
+[Unit]
+Description=Express Node API 
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+User=rauufaa
+WorkingDirectory=/home/rauufaa/kuliah/project-tugas-akhir/node-framework
+ExecStart=/home/rauufaa/.local/share/fnm/node-versions/v22.5.1/installation/bin/node /home/rauufaa/kuliah/project-tugas-akhir/node-framework/src/index.js
+
+[Install]
+WantedBy=multi-user.target
