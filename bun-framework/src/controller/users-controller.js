@@ -47,7 +47,7 @@ const put = async (req, res, next) => {
 
 const patch = async (req, res, next) => {
     try {
-        const result = await usersService.patch(req.body);
+        const result = await usersService.patch(req.body, req.params.user_id);
         res.status(200).json({
             data: result
         })

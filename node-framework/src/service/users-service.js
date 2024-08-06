@@ -7,7 +7,7 @@ const getAll = async (page, size) => {
     page = Math.round(page);
     size = Math.round(size);
 
-    if (!page || !size) throw new ResponseError(400, "Params must be integer");
+    if (!page || !size) throw new ResponseError(400, "Params page and size must be integer");
 
     if (UserDataTest.length < page * size) {
         page = 1;
@@ -65,7 +65,7 @@ const getAll = async (page, size) => {
 const get = async (user_id) => {
     const user = UserDataTest.find((value, index) => value.user_id === user_id);
 
-    if (!user) throw new ResponseError(400, "User not found");
+    if (!user) throw new ResponseError(404, "User not found");
 
     return {
         ...user,
@@ -117,7 +117,7 @@ const post = async (body) => {
 const put = async (body, user_id) => {
     const index = UserDataTest.findIndex(value => value.user_id === user_id);
 
-    if (index === -1) throw new ResponseError(400, "User not found");
+    if (index === -1) throw new ResponseError(404, "User not found");
 
 
     const newUser = {
@@ -156,8 +156,7 @@ const patch = async (body, user_id) => {
 
     const index = UserDataTest.findIndex(value => value.user_id === user_id);
 
-    if (index === -1) throw new ResponseError(400, "User not found");
-
+    if (index === -1) throw new ResponseError(404, "User not found");
 
     body.first_name && (UserDataTest[index].first_name = body.first_name);
     body.last_name && (UserDataTest[index].last_name = body.last_name);
@@ -170,14 +169,14 @@ const patch = async (body, user_id) => {
         ...UserDataTest[index],
         _links: {
             self: {
-                GET: `/api/users/${newUser.user_id}`
+                GET: `/api/users/${user_id}`
             },
             edit: {
-                PUT: `/api/users/${newUser.user_id}`,
-                PATCH: `/api/users/${newUser.user_id}`,
+                PUT: `/api/users/${user_id}`,
+                PATCH: `/api/users/${user_id}`,
             },
             delete: {
-                DELETE: `/api/users/${newUser.user_id}`
+                DELETE: `/api/users/${user_id}`
             },
         }
     };
@@ -186,8 +185,7 @@ const patch = async (body, user_id) => {
 const remove = async (user_id) => {
     const index = UserDataTest.findIndex(value => value.user_id == user_id);
 
-    if (index === -1) throw new ResponseError(400, "User not found");
-
+    if (index === -1) throw new ResponseError(404, "User not found");
 
     const userDelete = UserDataTest.splice(index, 1);
 
