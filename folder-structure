@@ -1,0 +1,18 @@
+index.js                        # File utama untuk menjalankan aplikasi
+app/                           
+└── web.js                      # File konfigurasi untuk pengaturan server 
+                                  seperti route dan middleware global
+controller/
+└── products-controller.js      # Controller untuk logika produk
+error/
+└── response-error.js           # File yang mendefinisikan format yang akan 
+                                  dikirimkan dalam respons error dari API.
+middleware/
+└── error-middleware.js         # Middleware untuk menangani error yang muncul 
+                                  dalam API.
+route/
+└── api.js                      # File yang mengatur routing atau endpoint API 
+                                  yang tersedia dalam aplikasi.
+service/
+└── products-service.js         # Layanan atau business logic untuk entitas produk.
+
