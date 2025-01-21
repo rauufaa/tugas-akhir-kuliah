@@ -60,7 +60,7 @@ fastify.get('/api/products', async function (request, reply) {
 
     })
 })
-fastify.listen({ port: 8000, host: "172.30.114.144" }, (err, address) => {
+fastify.listen({ port: 8000}, (err, address) => {
     if (err) {
         fastify.log.error(err);
         process.exit(1);

@@ -16,21 +16,235 @@ const product = {
 const get = async (productCode) => {
     if (!productCode) throw new ResponseError(404, "Product not found");
 
-    return {
-        ...product,
-        _links: {
-            self: {
-                GET: `/api/products/${product.code}`
-            },
-            edit: {
-                PUT: `/api/products/${product.code}`,
-                PATCH: `/api/products/${product.code}`
-            },
-            delete: {
-                DELETE: `/api/products/${product.code}`
-            },
-        }
-    };
+    const datas = [
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+        {
+            ...product,
+            _links: {
+                self: {
+                    GET: `/api/products/${product.code}`
+                },
+                edit: {
+                    PUT: `/api/products/${product.code}`,
+                    PATCH: `/api/products/${product.code}`
+                },
+                delete: {
+                    DELETE: `/api/products/${product.code}`
+                },
+            }
+        },
+    ]
+
+    return [datas, datas, datas, datas, datas, datas, datas];
 }
 
 const post = async (body) => {

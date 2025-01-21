@@ -3,11 +3,11 @@ import productsController from "../controller/products-controller.js";
 
 const route = express.Router()
 
-route.get("/api/products/:code", productsController.get)
-route.post("/api/products", productsController.post)
-route.put("/api/products/:code", productsController.put)
-route.patch("/api/products/:code", productsController.patch)
-route.delete("/api/products/:code", productsController.remove)
+route.get("/products/:code", productsController.get)
+route.post("/products", productsController.post)
+route.put("/products/:code", productsController.put)
+route.patch("/products/:code", productsController.patch)
+route.delete("/products/:code", productsController.remove)
 
 export {
     route

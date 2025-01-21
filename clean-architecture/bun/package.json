@@ -1,0 +1,11 @@
+{
+  "name": "bun-express-srv",
+  "module": "indexjs",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
