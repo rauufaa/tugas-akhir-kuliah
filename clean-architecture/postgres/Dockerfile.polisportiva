@@ -1,0 +1,7 @@
+FROM docker.io/library/postgres:17.5
+
+ENV POSTGRES_USER=admin
+ENV POSTGRES_PASSWORD=secret
+ENV POSTGRES_DB=polisportiva
+
+COPY polisportiva.sql /docker-entrypoint-initdb.d/

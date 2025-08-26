@@ -41,7 +41,7 @@ if (cluster.isPrimary) {
 } else {
     // Incoming requests are handled by the pool of workers
     // instead of the primary worker.
-    web.listen(8000, () => {
+    web.listen(8000, "127.0.0.1",() => {
         console.log("Running on port 8000...")
     })
 
